@@ -271,7 +271,7 @@ def NewClient(host, port, pool_size):
 # initialize the connection.
 def _send_hello(sock):
     ch = ConnectionHeader()
-    ch.user_info.effective_user = "pybase"
+    ch.user_info.effective_user = "root"
     ch.service_name = "ClientService"
     serialized = ch.SerializeToString()
     # Message is serialized as follows -
